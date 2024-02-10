@@ -8,18 +8,35 @@
 <body>
     
     <div class="alert-box" id="alert">
-        알림창임
-        <button onclick="document.getElementById('alert').style.display ='none'; ">닫기</button>
+        <p id="title">알림창임</p>
+        <button onclick="알림창열기('none');">닫기</button>
     </div>
-    <button onclick="작명()">버튼</button>
-    
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비밀번호알림창()">버튼2</button>
 <script>
 //    document.getElementById('hello').innerHTML = '안녕';
 //    폰트사이즈
 //    document.getElementById("hello").style.fontSize = "16px";
-    function 작명(){
+    function 알림창열기(구멍){
+        document.getElementById('alert').style.display =구멍;
+    }
+    
+    function 아이디알림창(){
+        document.getElementById('title').innerHTML = '아이디입력하셈';
         document.getElementById('alert').style.display ='block';
     }
+    function 비밀번호알림창(){
+        document.getElementById('title').innerHTML = '비밀번호입력';
+        document.getElementById('alert').style.display ='block';
+    }
+    
+    
+    
+//    
+//    function 알림창닫기(){
+//        document.getElementById('alert').style.display ='none';
+//    }
+    
 </script> 
 
 </body>
