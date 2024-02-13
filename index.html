@@ -16,6 +16,8 @@
     
 </head>
 <body>
+    
+    
 <!--    모달창 디자인-->
     <div class="black-bg">
         <div class="white-bg">
@@ -23,6 +25,9 @@
             <button class="btn btn-danger" id="close">닫기</button>
         </div>
     </div> 
+    
+    
+    
     
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -41,12 +46,20 @@
       <li class="list-group-item">And a fifth one</li>
     </ul>
     
+    <button id="login">로그인</button>
+    
     <p class="hello">안녕</p>
     <p class="hello">안녕</p>
     <p class="hello">안녕</p>
     <button id="text-btn">버튼</button>
     
     <script>
+//        모달창 로그인 버튼 누르면 모달창 뛰운다
+        $('#login').on('click', function(){
+            $('.black-bg').addClass('show-modal')
+        })
+        
+        
 //        jQuery사용
         $('.hello').html('바보');
         $('.hello').css('color','red');
