@@ -36,7 +36,7 @@
     </div> 
     
     <script>
-        if (1 ==2)
+        
 //        document.getElementById('email').addEventListener('change',function(){
 //            console.log('안녕')
 //        })
@@ -47,11 +47,16 @@
 //            console.log('맞아요2');
 //        }
 //        
-//         $('form').on('submit', function(){
-//             if(document.getElementById('email').value == '' ){
-//                alert('아이디입력안함')
-//            }
-//         });
+         $('form').on('submit', function(){
+             var 입력한값 = document.getElementById('email').value;
+             
+             if(입력한값 == '' ){
+                alert('아이디입력안함');
+            }
+             if ( /\S+@\S+\.\S+/.test(입력한값)){
+                 alert('이메일형식아님');
+             }
+         });
         
         
     </script>
