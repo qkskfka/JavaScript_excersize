@@ -74,6 +74,14 @@
     </nav>
     
     <script>
+        window.addEventListener('scroll', function(){
+            window.scrollTo(0,100);
+        });
+    </script>
+    
+        
+    
+    <script>
         
         var 이름 = 'kim';
         
@@ -102,6 +110,23 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+    
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+    </div>
+    
+    <script>
+        // div의 스크롤바 내린 양 + 눈에보이는 div높이 == div의 실제높이
+        $('.lorem').on('scroll', function(){
+  var 스크롤양 = document.querySelector('.lorem').scrollTop;
+  var 실제높이 = document.querySelector('.lorem').scrollHeight;
+  console.log(스크롤양, 실제높이);
+});
+        
+    </script>
+    
+    
+    <div style="height: 1000px"></div>
     
     <script>
         
