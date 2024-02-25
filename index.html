@@ -74,9 +74,15 @@
     </nav>
     
     <script>
-        window.addEventListener('scroll', function(){
-            window.scrollTo(0,100);
-        });
+        
+        $(window).on('scroll', function(){
+            if (window.scrollY > 100){
+                $('.navbar-brand').css('font-size', '20px');
+            } else {
+                $('.navbar-brand').css('font-size', '25px');
+            }
+        })
+        
     </script>
     
         
@@ -118,10 +124,17 @@
     <script>
         // div의 스크롤바 내린 양 + 눈에보이는 div높이 == div의 실제높이
         $('.lorem').on('scroll', function(){
-  var 스크롤양 = document.querySelector('.lorem').scrollTop;
-  var 실제높이 = document.querySelector('.lorem').scrollHeight;
-  console.log(스크롤양, 실제높이);
-});
+            var 스크롤양 = document.querySelector('.lorem').scrollTop;
+            var 실제높이 = document.querySelector('.lorem').scrollHeight;
+            var 높이 = document.querySelector('.lorem').clientHeight;
+            if () {
+                alert('다읽음')
+            }
+        })
+        
+        document.querySelector('html').scrollHeight
+        document.querySelector('html').clientHeight
+        window.scrollY
         
     </script>
     
