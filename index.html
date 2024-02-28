@@ -37,6 +37,23 @@
     
     <script>
         
+        document.querySelector('.black-bg').addEventListener('click',function(e){
+            
+//            e.target; // 유저가 실제로 누른거
+//            e.currentTarget; //이벤트리스너 달린 곳
+//            e.preventDefault();
+//            e.stopImmediatePropagation();
+            if (e.target == document.querySelector('.black-bg')){
+                document.querySelector('.black-bg').classList.remove('show-medal');
+                }
+            
+            document.querySelector('.black-bg').classList.remove('show-modal'); 
+        })
+    
+    </script>
+       
+    <script>
+        
 //        document.getElementById('email').addEventListener('change',function(){
 //            console.log('안녕')
 //        })
