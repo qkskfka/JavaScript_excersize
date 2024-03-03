@@ -36,28 +36,46 @@
         <select class="form-select mt-2">
           <option>모자</option>
           <option>셔츠</option>
+          <option>바지</option>
         </select>
         <select class="form-select mt-2 form-hide">
             <option>95</option>
             <option>100</option>
         </select>
         
-        <script>
+    </form>
+    
+    
+    <div di ="test">
+    
+    </div>
+    
+    
+    
+    <script>
+        
+        $('.form-select').eq(0).on('input', function(){
+            var value = this.value;
+            
+            if (value == '셔츠'){
+                $('.form-select').eq(1).removeClass('form-hide');
+            }
+            else if (value == '바지'){
+                $('.form-select').eq(1).removeClass('form-hide');
+                $('.form-select').eq(1).html('');
+                var 템플릿 = `<option>28</option><option>30</option>`;
+                $('.form-select').eq(1).append(템플릿);
+            }
+        })
+        
         
         $('.form-select').eq(0).on('input', function(){
             var valuse = $('.form-select').eq(0).val();
             if (valuse == '셔츠'){
-            $('.form-select').eq(1).removeClass('form-hide');
-         }
-        })
-        
-        
-        
-            
-        </script>
-        
-    </form>
-    
+                $('.form-select').eq(1).removeClass('form-hide');
+            }
+        })    
+    </script>
     
     <style>
   ul.list {
