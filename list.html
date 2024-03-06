@@ -64,5 +64,20 @@
 
     
 </script> 
+    
+    <script>
+        
+        fetch('https://codingapple1.github.io/price.json')
+          .then(res => res.json())
+          .then(function(data){
+            console.log(data)
+          })
+          .catch(function(error){
+            console.log('실패함')
+          });
+        
+    
+    </script>
+    
 </body>
 </html>
