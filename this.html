@@ -2,12 +2,13 @@
 
 <script>
 
-    console.log(this)
-    
-    function 함수 (){
-        console.log(this);
-    }
-    
-    함수 ()
+    var 오브젝트 = {
+  이름들 : ['김', '이', '박'];
+  함수 : function(){
+      오브젝트.이름들.forEach(() => {
+        console.log(this)
+      });
+  }
+}
 
 </script>
